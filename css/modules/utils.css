@@ -1,0 +1,38 @@
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+.f-direction-column { flex-direction: column; }
+.md\:f-direction-row { flex-direction: row; }
+
+.a-items-center { align-items: center; }
+.j-content-s-between { justify-content: space-between; }
+
+.text-center { text-align: center; }
+.color-white { color: var(--white-color); }
+
+.g-2 { gap: calc(var(--size) * 2); }
+.g-4 { gap: calc(var(--size) * 4); }
+
+.no-margin { margin: 0; }
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none !important;
+    color: var(--black-color);
+}
+
+.name-stars-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.compact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

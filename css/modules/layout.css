@@ -1,0 +1,66 @@
+.container {
+    max-width: 1080px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+.header {
+    background-color: white;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+}
+
+.nav {
+    padding-block: 1rem;
+}
+
+.m-article {
+    padding-block: 4rem;
+    gap: 2rem;
+}
+
+.how-it-works {
+    background-color: var(--primary-color);
+    padding-block: 5rem;
+}
+
+.favorite-restaurants {
+    padding-block: 5rem;
+}
+
+.earn-money {
+    padding-block: 5rem;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    padding-top: 4rem;
+}
+
+.footer-copy {
+    background-color: var(--primary-color);
+    padding-block: 1.5rem;
+}
+
+/* Footer grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Earn section */
+.earn-grid {
+    flex-wrap: nowrap;
+}
+
+.earn-img-container {
+    flex: 1;
+}
+
+.earn-content {
+    flex: 1;
+}

@@ -1,0 +1,13 @@
+:root {
+    --fuente-principal: 'Roboto', sans-serif;
+
+    --primary-color: #e8505b;
+    --secondary-color: #455a64;
+
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --light-gray: #eceeef;
+
+    --size: 0.25rem;
+    --transition-duration: 0.3s;
+}
