@@ -1,0 +1,149 @@
+:root {
+    --fuente-principal: 'Roboto', sans-serif;
+    --primary-color: #e8505b;
+    --secondary-color: #455a64;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --light-gray: #eceeef;
+    --size: 0.25rem;
+    --transition-duration: 0.3s;
+}
+
+.body {
+    font-family: var(--fuente-principal);
+}
+
+.header {
+    background-color: white;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+}
+
+.nav {
+    padding-block: 1rem;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*layout*/
+.container {
+    max-width: 1080px;
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+/*elements*/
+.btn-register {
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    color:var(--white-color);
+    text-decoration: none;
+}
+
+
+.link{
+    text-decoration: none !important;
+    color:var(--black-color);
+}
+/* Layout / Main Article */
+.m-article {
+    padding-block: 4rem;
+    gap: 2rem;
+}
+
+.hero-content {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    color: var(--white-color);
+    max-width: 500px;
+    border-radius: 4px; /* Opcional, según la imagen es bastante cuadrado */
+}
+
+.hero-img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Elements / Form */
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--fuente-principal);
+}
+
+.btn-search {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background var(--transition-duration);
+}
+
+.btn-search:hover {
+    background-color: var(--black-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .m-article {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-img {
+        max-width: 80%;
+    }
+}
+
+
+/*utils*/
+.d-flex {
+    display: flex;
+}
+
+.f-direction-column {
+    flex-direction: column;
+}
+
+.a-items-center {
+    align-items: center;
+}
+
+.j-content-s-between {
+    justify-content: space-between;
+}
+
+.g-2 {
+    gap: calc(var(--size) * 2);
+}
+
+.g-4 {
+    gap: calc(var(--size) * 4);
+}
+
+@media (width >=768px) {
+    .md\:f-direction-row {
+        flex-direction: row;
+    }
+}
