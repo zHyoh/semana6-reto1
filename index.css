@@ -147,3 +147,42 @@ input[type="text"] {
         flex-direction: row;
     }
 }
+/* Layout / How it works */
+.how-it-works {
+    background-color: var(--primary-color); /* El fondo rojo de la imagen */
+    padding-block: 5rem;
+}
+
+.title-section {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.color-white {
+    color: var(--white-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Elements / Cards */
+.step-card {
+    max-width: 300px; /* Tamaño aproximado de cada tarjeta */
+    border-radius: 20px; /* Redondeado de la imagen */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para que resalten */
+    background-color: var(--white-color);
+}
+
+.steps-container {
+    width: 100%;
+}
+
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

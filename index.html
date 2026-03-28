@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>App Comida</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <nav class="nav">
             <div class="container d-flex f-direction-column a-items-center j-content-s-between md:f-direction-row">
                 <img src="./images/logo.svg" alt="logo app comidas" width="120" height="32">
-                <ul class="list d-flex g-2">
-                    <li><a class="link" href="">Iniciar Sesión</a></li>
-                    <li><a class="link" href="">Crear Cuenta</a></li>
-                    <li><a class="btn-register" href="">Registrar Cuenta</a> </li>
+                <ul class="list d-flex a-items-center g-4">
+                    <li><a class="link" href="#">Iniciar Sesión</a></li>
+                    <li><a class="link" href="#">Crear Cuenta</a></li>
+                    <li><a class="btn-register link" href="#">Registrar Cuenta</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
         <article class="m-article d-flex a-items-center j-content-s-between container">
             <div class="hero-content">
@@ -34,18 +35,23 @@
                         PLATILLO
                         <input type="text" name="platillo" placeholder="Pizza, Ensalada, Hamburguesa">
                     </label>
-                    <button class="btn-search">Buscar</button>
+                    <button type="button" class="btn-search">Buscar</button>
                 </form>
             </div>
             <img src="./images/dibujo_repartidor.svg" alt="Repartidor" class="hero-img">
         </article>
-        <section>
-            <div class="container>
-                <div>
-                    <h3>¿Como funciona?</h3>
-                    <p>Tan facil como 1, 2 y 3</p>
+
+        <section class="how-it-works">
+            <div class="container d-flex f-direction-column a-items-center g-4">
+                <div class="text-center color-white">
+                    <h3 class="title-section">¿Cómo funciona?</h3>
+                    <p>tan fácil como 1, 2 y 3</p>
                 </div>
-                <div>
+
+                <div class="d-flex j-content-s-between g-4 steps-container">
+                    <img class="step-card" src="./images/paso_1.png" alt="paso1-como funciona">
+                    <img class="step-card" src="./images/paso_2.png" alt="paso2-como funciona">
+                    <img class="step-card" src="./images/paso_3.png" alt="paso3-como funciona">
                 </div>
             </div>
         </section>
