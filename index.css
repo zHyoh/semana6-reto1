@@ -1,3 +1,4 @@
+/* --- Variables --- */
 :root {
     --fuente-principal: 'Roboto', sans-serif;
     --primary-color: #e8505b;
@@ -9,8 +10,16 @@
     --transition-duration: 0.3s;
 }
 
+/* --- Base --- */
 .body {
     font-family: var(--fuente-principal);
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 1080px;
+    padding-inline: 1rem;
+    margin-inline: auto;
 }
 
 .header {
@@ -24,70 +33,58 @@
     padding-block: 1rem;
 }
 
-.list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/*layout*/
-.container {
-    max-width: 1080px;
-    padding-inline: 1rem;
-    margin-inline: auto;
-}
-
-/*elements*/
-.btn-register {
-    padding: 10px 25px;
-    background-color: var(--primary-color);
-    border-radius: 12px;
-    color:var(--white-color);
-    text-decoration: none;
-}
-
-
-.link{
-    text-decoration: none !important;
-    color:var(--black-color);
-}
-/* Layout / Main Article */
 .m-article {
     padding-block: 4rem;
     gap: 2rem;
 }
 
-.hero-content {
+.how-it-works {
     background-color: var(--primary-color);
-    padding: 3rem;
+    padding-block: 5rem;
+}
+
+/* --- Grid Testimonials --- */
+.grid-testimonials {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.card-juan {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.card-itzel {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.card-rocio {
+    grid-column: 4 / 6;
+    grid-row: 1 / 3;
+}
+
+/* Ajustado según grid de 5 col */
+.card-cynthia {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.card-jose {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* --- Components --- */
+.btn-register {
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
     color: var(--white-color);
-    max-width: 500px;
-    border-radius: 4px; /* Opcional, según la imagen es bastante cuadrado */
-}
-
-.hero-img {
-    max-width: 50%;
-    height: auto;
-}
-
-/* Elements / Form */
-.title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-}
-
-label {
-    font-weight: bold;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-}
-
-input[type="text"] {
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-family: var(--fuente-principal);
+    text-decoration: none;
 }
 
 .btn-search {
@@ -105,21 +102,91 @@ input[type="text"] {
     background-color: var(--black-color);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .m-article {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-img {
-        max-width: 80%;
-    }
+.hero-content {
+    background-color: var(--primary-color);
+    padding: 3rem;
+    color: var(--white-color);
+    max-width: 500px;
+    border-radius: 4px;
 }
 
+.step-card {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+}
 
-/*utils*/
+.test-card {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: 40px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--white-color);
+}
+
+/* --- Typography & Elements --- */
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.title-section {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-text {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--fuente-principal);
+}
+
+/* --- Utils --- */
 .d-flex {
     display: flex;
+}
+
+.d-grid {
+    display: grid;
 }
 
 .f-direction-column {
@@ -134,6 +201,14 @@ input[type="text"] {
     justify-content: space-between;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.color-white {
+    color: var(--white-color);
+}
+
 .g-2 {
     gap: calc(var(--size) * 2);
 }
@@ -142,47 +217,62 @@ input[type="text"] {
     gap: calc(var(--size) * 4);
 }
 
-@media (width >=768px) {
-    .md\:f-direction-row {
-        flex-direction: row;
-    }
-}
-/* Layout / How it works */
-.how-it-works {
-    background-color: var(--primary-color); /* El fondo rojo de la imagen */
-    padding-block: 5rem;
+.name-stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.title-section {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.compact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.color-white {
-    color: var(--white-color);
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.text-center {
-    text-align: center;
+.link {
+    text-decoration: none !important;
+    color: var(--black-color);
 }
 
-/* Elements / Cards */
-.step-card {
-    max-width: 300px; /* Tamaño aproximado de cada tarjeta */
-    border-radius: 20px; /* Redondeado de la imagen */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para que resalten */
-    background-color: var(--white-color);
-}
-
-.steps-container {
-    width: 100%;
-}
-
-/* Ajuste para móvil */
+/* --- Responsive --- */
 @media (max-width: 768px) {
+    .m-article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 80%;
+    }
+
     .steps-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .grid-testimonials {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card-juan,
+    .card-itzel,
+    .card-rocio,
+    .card-cynthia,
+    .card-jose {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:f-direction-row {
+        flex-direction: row;
     }
 }
